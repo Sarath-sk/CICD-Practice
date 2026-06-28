@@ -25,6 +25,10 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r linux-requirements.txt
 
+      - name: Install Playwright browsers
+        run: |
+          python -m playwright install chromium
+
       - name: Run tests
         run: pytest -v -s
         
