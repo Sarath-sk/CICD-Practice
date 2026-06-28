@@ -32,7 +32,7 @@ jobs:
       - name: Run tests
         run: |
           mkdir -p reports
-          pytest -v -s --html=reports/report.html
+          pytest -v -s --html=reports/report.html --css=reports/report.css
 
       - name: Upload reports
         uses: actions/upload-artifact@v4
@@ -53,5 +53,5 @@ jobs:
           body: "Hello Team, \n\n GitHub Actions has completed \n\n Project Name: Project 1 \n\n Build Status: Success \n\n Please find the attached report."
           to: ${{ secrets.EMAIL_TO }}
           from: ${{ secrets.EMAIL_FROM }}
-          attachments: reports/report.html
+          attachments: reports/report.html, reports/report.css
         
