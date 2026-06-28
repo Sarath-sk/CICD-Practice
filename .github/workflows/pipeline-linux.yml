@@ -30,7 +30,9 @@ jobs:
           python -m playwright install chromium
 
       - name: Run tests
-        run: pytest -v -s
+        run: |
+          mkdir -p reports
+          pytest -v -s --html=reports/report.html
 
       - name: Upload reports
         uses: actions/upload-artifact@v4
