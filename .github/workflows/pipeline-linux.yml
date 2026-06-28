@@ -50,7 +50,7 @@ jobs:
           password: ${{ secrets.EMAIL_PASSWORD }}
           subject: "Playwright Test Report"
           body: "Please find the attached test report."
-          to: yedurusarath18@gmail.com
-          from: "${{ secrets.EMAIL_USERNAME }}"
+          to: ${{ secrets.EMAIL_TO }}
+          from: ${{ secrets.EMAIL_FROM }}
           attachments: reports/report.html
         
