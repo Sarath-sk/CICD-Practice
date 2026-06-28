@@ -42,7 +42,7 @@ jobs:
 
       - name: Send Test Report via Email
         if: always()  # Ensure this step runs even if tests fail
-        uses: dawidd6/action-send-mail@v3
+        uses: dawidd6/action-send-mail@v4
         with:
           server_address: smtp.gmail.com
           server_port: 465
@@ -51,6 +51,6 @@ jobs:
           subject: "Playwright Test Report"
           body: "Please find the attached test report."
           to: yedurusarath18@gmail.com
-          from: ${{ secrets.EMAIL_USERNAME }}
+          from: "${{ secrets.EMAIL_USERNAME }}"
           attachments: reports/report.html
         
