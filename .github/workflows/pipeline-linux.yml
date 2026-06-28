@@ -52,6 +52,6 @@ jobs:
           subject: "Playwright Test Report"
           body: "Please find the attached test report."
           to: ${{ secrets.EMAIL_TO }}
-          from: ${{ secrets.MEMAIL_FROM }}
+          from: ${{ secrets.EMAIL_FROM }}
           attachments: reports/report.html
         
