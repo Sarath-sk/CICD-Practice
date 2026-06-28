@@ -49,8 +49,8 @@ jobs:
           secure: true
           username: ${{ secrets.MAIL_USERNAME }}
           password: ${{ secrets.MAIL_PASSWORD }}
-          subject: "Playwright Test Report"
-          body: "Please find the attached test report."
+          subject: "Build Success: Project Name"
+          body: "Hello Team, \n\n GitHub Actions has completed \n\n Project Name: Project 1 \n\n Build Status: Success \n\n Please find the attached report."
           to: ${{ secrets.EMAIL_TO }}
           from: ${{ secrets.EMAIL_FROM }}
           attachments: reports/report.html
