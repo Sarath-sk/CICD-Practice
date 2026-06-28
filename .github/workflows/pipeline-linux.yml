@@ -46,11 +46,12 @@ jobs:
         with:
           server_address: smtp.gmail.com
           server_port: 465
+          secure: true
           username: ${{ secrets.MAIL_USERNAME }}
           password: ${{ secrets.MAIL_PASSWORD }}
           subject: "Playwright Test Report"
           body: "Please find the attached test report."
           to: ${{ secrets.EMAIL_TO }}
-          from: ${{ secrets.EMAIL_FROM }}
+          from: ${{ secrets.MAIL_USERNAME }}
           attachments: reports/report.html
         
